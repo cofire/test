@@ -9,12 +9,17 @@
 </head>
 
 <body>
+    <p>2020年2月11日09:17:29</p>
     <script>
-    alert(getCookie('username'));
-    if (getCookie('username') == undefined || getCookie('username') == null || getCookie('username') == "") {
-        setCookie('username', '123', 365);
+    window.onload = function() {
+        //方法内容
+        alert(getCookie('username'));
+        if (getCookie('username') == undefined || getCookie('username') == null || getCookie('username') == "") {
+            setCookie('username', '123', 365);
+        }
+        alert(getCookie('username'));
     }
-    alert(getCookie('username'));
+
     //设置cookie
     function setCookie(c_name, value, expiredays) {
         var exdate = new Date()
