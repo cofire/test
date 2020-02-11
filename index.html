@@ -10,14 +10,17 @@
 
 <body>
     <p>2020年2月11日09:17:29</p>
+    <p id="cookie">1232424</p>
     <script>
     window.onload = function() {
         //方法内容
         alert(getCookie('username'));
+        document.getElementById("cookie").innerHTML = getCookie('username');
         if (getCookie('username') == undefined || getCookie('username') == null || getCookie('username') == "") {
             setCookie('username', '123', 365);
         }
         alert(getCookie('username'));
+        document.getElementById("cookie").innerHTML = getCookie('username');
     }
 
     //设置cookie
